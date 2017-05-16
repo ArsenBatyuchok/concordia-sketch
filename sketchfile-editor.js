@@ -44,6 +44,9 @@ module.exports = function (params, res) {
 
               const filestream = fs.createReadStream(file);
               filestream.pipe(res);
+              res.once("finish", function () {
+                deleteFile(file);
+              });
             });
         });
     });
@@ -58,4 +61,12 @@ function generateRandomFileName() {
     text += possible.charAt(Math.floor(Math.random() * possible.length));
   }
   return text;
+}
+
+function deleteFile(file) {
+  fs.unlink(file, function (err) {
+    if (err) {
+      logger.error(err);
+    }
+  });
 }
