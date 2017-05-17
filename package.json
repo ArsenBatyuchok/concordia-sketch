@@ -1,0 +1,15 @@
+{
+  "name": "concordia-sketch",
+  "version": "1.0.0",
+  "description": "A tool to generate Sketch files with defined grids created on concordia.com",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "concordiagrid.com",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.15.2",
+    "jszip": "^3.1.3"
+  }
+}
