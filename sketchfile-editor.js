@@ -21,7 +21,7 @@ module.exports = function (params, res) {
           const artboardWidth = json.layers[0].frame.width;
 
           layout.rowHeightMultiplication = 1;
-          layout.guttersOutside = true;
+          layout.guttersOutside = false;
           layout.totalWidth = params.width;
           layout.gutterHeight = params.baseline;
           layout.numberOfColumns = params.numberOfColumns;
